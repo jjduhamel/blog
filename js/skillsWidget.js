@@ -19,8 +19,6 @@ var link = svg.selectAll('.link');
 
 d3.json('js/skillsTree.json', function(json) {
   root = json;
-  root.x = 20;
-  root.y = 20;
   root.fixed = true;
   compress(root);
 });
@@ -123,6 +121,9 @@ function flatten(root) {
     nodes.push(node);
   }
   recurse(root);
+
+  root.x = nodes[0].x;
+  root.y = nodes[0].y;
 
   return nodes;
 }
