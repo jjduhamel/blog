@@ -1,0 +1,29 @@
+@import './css/colors';
+
+div#header {
+  font-family: 'Delius Unicase', cursive;
+  font-size: 24px;
+}
+
+div#content {
+  font-family: 'Delius';
+  font-size: 16px;
+}
+
+div#footer {
+  display: flex;
+
+  #profile {
+    flex: auto;
+    text-align: left;
+
+    a {
+      padding-right: 10px;
+    }
+  }
+
+  #disclaimer {
+    flex: auto;
+    text-align: right;
+  }
+}

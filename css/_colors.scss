@@ -1,0 +1,57 @@
+$black: #000000;
+$pencil: #585c65;
+
+$brown: #673933;
+$brown1: lighten($brown, 20%);
+$brown2: lighten($brown, 10%);
+$brown3: darken($brown, 0%);
+$brown4: darken($brown, 10%);
+$brown5: darken($brown, 20%);
+
+$red: #D62A35;
+$red1: lighten($red, 20%);
+$red2: lighten($red, 10%);
+$red3: darken($red, 0%);
+$red4: darken($red, 10%);
+$red5: darken($red, 20%);
+
+$beige: #D8C6B8;
+$beige1: lighten($beige, 20%);
+$beige2: lighten($beige, 10%);
+$beige3: darken($beige, 0%);
+$beige4: darken($beige, 10%);
+$beige5: darken($beige, 20%);
+
+$green: #93AB3D;
+$green1: lighten($green, 20%);
+$green2: lighten($green, 10%);
+$green3: darken($green, 0%);
+$green4: darken($green, 10%);
+$green5: darken($green, 20%);
+
+$blue: #8CC8CA;
+$blue1: lighten($blue, 20%);
+$blue2: lighten($blue, 10%);
+$blue3: darken($blue, 0%);
+$blue4: darken($blue, 10%);
+$blue5: darken($blue, 20%);
+
+.bg-brown {
+  background-color: $brown;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-beige {
+  background-color: $beige;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-blue {
+  background-color: $blue;
+}

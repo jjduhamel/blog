@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Delius);
+@import url(https://fonts.googleapis.com/css?family=Delius+Unicase:400);
+
+@import './css/colors';
+@import './css/syntax';
+
+@import './css/layout';
+@import './css/kitchen-sink';
+@import './css/contact';
+@import './css/skills-widget';
+
+
+body {
+  background-image: url('https://inspirationhut.net/wp-content/uploads/2014/09/lined-paper-texture.jpg');
+  color: #585c65;
+  font-family: 'Delius';
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+}
+
+div#logo {
+  a {
+    font-size: 24px;
+  }
+}
+
+.profile-image {
+  width: 256px;
+}

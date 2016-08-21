@@ -1,0 +1,174 @@
+{
+  "name": "root",
+  "image": "images/builder.png",
+  "children": [{
+    "name": "Electronics",
+    "image": "images/electronics.jpg",
+  }, {
+    "name": "Infrastructure",
+    "image": "images/cloud.png",
+    "children": [{
+      "name": "Amazon Web Services",
+      "image": "https://www.otixo.com/wp-content/uploads/2015/07/s3.png",
+      "children": [{
+        "name": "EC2",
+        "image": "images/aws-ec2.png"
+      }, {
+        "name": "Elastic Beanstalk",
+        "image": "images/elastic-beanstalk.png"
+      }, {
+        "name": "SES",
+        "image": "images/aws-ses.png"
+      }, {
+        "name": "RDS",
+        "image": "images/aws-rds.png"
+      }, {
+        "name": "S3",
+        "image": "images/aws-s3.png"
+      }, {
+        "name": "Lambda",
+        "image": "images/aws-lambda.png"
+      }]
+    }, {
+      "name": "Docker",
+      "image": "images/docker.png"
+    }, {
+      "name": "Email",
+      "image": "images/email.png",
+      "children": [{
+        "name": "Sparkpost",
+        "image": "images/sparkpost.png"
+      }, {
+        "name": "Sendgrid",
+        "image": "images/sendgrid.jpg"
+      }, {
+        "name": "Amazon SES",
+        "image": "images/aws-ses.png"
+      }]
+    }, {
+      "name": "Hashicorp",
+      "image": "images/hashicorp.png",
+      "children": [{
+        "name": "Terraform",
+        "image": "images/terraform.png"
+      }, {
+        "name": "Vagrant",
+        "image": "images/vagrant.png"
+      }, {
+        "name": "Vault",
+        "image": "images/vault.png"
+      }, {
+        "name": "Packer",
+        "image": "images/packer.png"
+      }]
+    }, {
+      "name": "CircleCI",
+      "image": "images/circleci.png"
+    }]
+  }, {
+    "name": "Backend",
+    "image": "images/backend.png",
+    "children": [{
+      "name": "NodeJS",
+      "image": "images/nodejs.png",
+      "children": [{
+        "name": "Express",
+        "image": "images/expressjs.png"
+      }, {
+        "name": "KoaJS",
+        "image": "images/koajs.jpg"
+      }, {
+        "name": "Mocha",
+        "image": "images/mochajs.png"
+      }, {
+        "name": "Sequelize",
+        "image": "images/sequelize.png"
+      }]
+    }, {
+      "name": "Ruby",
+      "image": "images/ruby.png",
+      "children": [{
+        "name": "Sinatra",
+        "image": "images/rb-sinatra.png"
+      }, {
+        "name": "Rails",
+        "image": "images/rb-rails.png"
+      }]
+    }, {
+      "name": "RabbitMQ",
+      "image": "images/rabbitmq.png"
+    }]
+  }, {
+    "name": "Databases",
+    "image": "images/database.png",
+    "children": [{
+      "name": "Postgres",
+      "image": "images/postgres.png"
+    }, {
+      "name": "MongoDB",
+      "image": "images/mongodb.png"
+    }, {
+      "name": "RethinkDB",
+      "image": "images/rethinkdb.png"
+    }, {
+      "name": "CouchDB",
+      "image": "images/couchdb.png"
+    }, {
+      "name": "Redis",
+      "image": "images/redis.png"
+    }]
+  }, {
+    "name": "Frontend",
+    "image": "images/frontend.png",
+    "children": [{
+      "name": "React",
+      "image": "images/react.png"
+    }, {
+      "name": "Redux",
+      "image": "images/redux.png",
+      "children": [{
+        "name": "Immutable.js"
+      }, {
+        "name": "Normalizr"
+      }, {
+        "name": "Redux Forms"
+      }, {
+        "name": "Redux Actions"
+      }]
+    }, {
+      "name": "CSS",
+      "image": "images/css.png",
+      "children": [{
+        "name": "Sass"
+      }, {
+        "name": "Less"
+      }, {
+        "name": "Bourbon"
+      }, {
+        "name": "Material Design"
+      }, {
+        "name": "Breakpoint"
+      }]
+    }, {
+      "name": "Graphs",
+      "image": "images/plot.png",
+      "children": [{
+        "name": "D3"
+      }, {
+        "name": "Chart.js"
+      }]
+    }]
+  }, {
+    "name": "Tools",
+    "image": "images/hammer.png",
+    "children": [{
+      "name": "Gulp"
+    }, {
+      "name": "Webpack"
+    }, {
+      "name": "Mediawiki"
+    }, {
+      "name": "Gitit"
+    }]
+  }]
+}
