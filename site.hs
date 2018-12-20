@@ -12,7 +12,7 @@ import           System.FilePath.Posix  (takeBaseName,takeDirectory
 
 hakyllConf :: Configuration
 hakyllConf = defaultConfiguration {
-    deployCommand = "aws --profile hbpcb s3 sync --delete _site s3://jjd-blog"
+    deployCommand = "aws --profile hbpcb s3 sync --delete _site s3://johnduhamel.io"
   , previewHost = "0.0.0.0"
 }
 
@@ -89,7 +89,6 @@ main = hakyllWith hakyllConf $ do
 
     match "templates/*" $ compile templateBodyCompiler
 
-
 --------------------------------------------------------------------------------
 --  Compilers
 --------------------------------------------------------------------------------
@@ -103,11 +102,9 @@ compressScssCompiler :: Compiler (Item String)
 compressScssCompiler = do
   fmap (fmap compressCss) $
     getResourceString
-    >>= withItemBody (unixFilter "sass" [ "-s"
-                                        , "--scss"
-                                        , "--compass"
+    >>= withItemBody (unixFilter "sass" [ "--stdin"
                                         , "--style", "compressed"
-                                        , "--load-path", "scss"
+                                        , "--load-path", "./css"
                                         ])
 
 --------------------------------------------------------------------------------
