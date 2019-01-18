@@ -8,13 +8,19 @@ After graduation, I moved to Silicon Valley, where I've spent time working for b
 
 I'm always interested in connecting with like-minded people to collaborate with.  If you'd like to get in touch, feel free to contact me using any of the platforms below:
 
+<ul id="online-profiles" class="fa-ul">
+  <li>
+  <span class="fa-li"><i class="fab fa-facebook"></i></span>
+  <a href="https://www.facebook.com/jjduhamel">Facebook</a>
+  </li>
+  <li>
+  <span class="fa-li"><i class="fab fa-github"></i></span>
+  <a href="https://www.github.com/jjduhamel">Github</a>
+  </li>
+  <li>
+  <span class="fa-li"><i class="fab fa-linkedin"></i></span>
+  <a href="https://www.linkedin.com/in/john-duhamel-68628128">LinkedIn</a>
+  </li>
+</ul>
+
 **Email:** john dot duhamel at gmail dot com
-
-<div id="online-profiles">
-  <a class="fa fa-facebook fa-3x" href="https://www.facebook.com/jjduhamel"></a>
-  <a class="fa fa-github fa-3x" href="https://www.github.com/jjduhamel"></a>
-  <a class="fa fa-linkedin fa-3x" href="https://www.linkedin.com/in/john-duhamel-68628128"></a>
-  <a class="fa fa-envelope fa-3x" href="mailto:john.duhamel@gmail.com"></a>
-</div>
-
-You can find the [source code](https://github.com/jjduhamel/blog) for this site on my [github page](https://github.com/jjduhamel).
