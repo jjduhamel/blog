@@ -1,0 +1,96 @@
+{
+  "name": "root",
+  "image": "images/builder.png",
+  "x": 100,
+  "y": 100,
+  "children": [{
+    "name": "Cloud",
+    "image": "images/cloud.png",
+    "children": [{
+      "name": "AWS",
+      "image": "images/aws.png"
+    }, {
+      "name": "Docker",
+      "image": "images/docker.png",
+      "children": [{
+        "name": "CoreOS",
+        "image": "images/coreos.png"
+      }, {
+        "name": "Portainer",
+        "image": "images/portainer.png"
+      }]
+    }, {
+      "name": "Elastic",
+      "image": "images/elastic.png"
+    }, {
+      "name": "Grafana",
+      "image": "images/grafana.png"
+    }, {
+      "name": "Hashicorp",
+      "image": "images/hashicorp.png"
+    }]
+  }, {
+    "name": "Coding",
+    "image": "images/coding.png",
+    "children": [{
+      "name": "C",
+      "image": "images/c-lang.png"
+    }, {
+      "name": "NodeJS",
+      "image": "images/nodejs.png",
+      "children": [{
+          "name": "Express",
+          "image": "images/expressjs.png"
+        }, {
+          "name": "KoaJS",
+          "image": "images/koajs.png"
+      }, {
+        "name": "React",
+        "image": "images/react.png"
+      }]
+    }, {
+      "name": "Haskell",
+      "image": "images/haskell-logo.png"
+    }, {
+      "name": "Ruby",
+      "image": "images/ruby.png",
+      "children": [{
+        "name": "Sinatra",
+        "image": "images/rb-sinatra.png"
+      }]
+    }]
+  }, {
+    "name": "CSS",
+    "image": "images/css.png",
+    "children": [{
+      "name": "Sass",
+      "image": "images/sass.png"
+    }]
+  }, {
+    "name": "OS",
+    "image": "images/os.png",
+    "children": [{
+      "name": "Linux",
+      "image": "images/linux.png",
+      "children": [{
+        "name": "Arch",
+        "image": "images/arch.png"
+      }, {
+        "name": "NixOS",
+        "image": "images/nixos.png"
+      }, {
+        "name": "Slackware",
+        "image": "images/slackware.png"
+      }]
+    }, {
+      "name": "MacOS",
+      "image": "images/macos.png"
+    }, {
+      "name": "OpenBSD",
+      "image": "images/openbsd.png"
+    }]
+  }, {
+    "name": "Bitcoin",
+    "image": "images/bitcoin.png"
+  }]
+}

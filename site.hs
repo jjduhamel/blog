@@ -30,7 +30,7 @@ main = hakyllWith hakyllConf $ do
       route   idRoute
       compile compressCssCompiler
 
-    match "css/*.scss" $ do
+    match "css/app.scss" $ do
       route $ setExtension "css"
       compile compressScssCompiler
 
@@ -65,6 +65,14 @@ main = hakyllWith hakyllConf $ do
         >>= applyAsTemplate defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
+
+    match "portfolio.html" $ do
+      route idRoute
+      compile $ do
+        getResourceBody
+          >>= applyAsTemplate defaultContext
+          >>= loadAndApplyTemplate "templates/default.html" defaultContext
+          >>= relativizeUrls
 
     match "design.html" $ do
       route idRoute

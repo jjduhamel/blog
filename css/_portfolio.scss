@@ -1,0 +1,17 @@
+#portfolio {
+  #stack {
+    img {
+      height: 40px;
+    }
+  }
+
+  #color-pallete {
+    display: flex;
+    margin: 10px;
+
+    div {
+      flex: auto;
+      height: 16px;
+    }
+  }
+}
