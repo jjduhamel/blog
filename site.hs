@@ -111,6 +111,7 @@ compressScssCompiler = do
   fmap (fmap compressCss) $
     getResourceString
     >>= withItemBody (unixFilter "sass" [ "--stdin"
+                                        , "--scss"
                                         , "--style", "compressed"
                                         , "--load-path", "./css"
                                         ])
