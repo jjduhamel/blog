@@ -1,5 +1,5 @@
 ---
-title: Building This
+title: Building this website
 author: John Duhamel
 ---
 

@@ -92,7 +92,7 @@ $ nixos-rebuild switch
 
 ## Add a User
 
-Next, create a new user other than root. Note that I do this at the command line rather than my nix config, because this is system dependent. If I wish to migration my configuration to an existing system, I should not have to update the config to reflect all the users on that system. Similarly, I would not want NixOS to create new users for me.
+**Note:**  We do this at the command line rather than my nix config.  This approach allows you to decouple system-dependent variables from your NixOS configuration.  Some users may prefer to hardcode these in the nix config.
 
 ```bash
 $ useradd -m -G wheel <user>
@@ -107,3 +107,11 @@ Also, you may wish to enable passwordless sudo.
   security.sudo.enable = true;
   security.sudo.wheelNeedsPassword = false;
 ```
+
+```bash
+$ nixos-rebuild switch
+```
+
+# Conclusion
+
+Now you have a very basic NixoS installation.  You may wish to read my [next post](/posts/2019-01-29-nixos-i3-setup.html) as well, where I set up i3 and install a few appications to make the install more usable.

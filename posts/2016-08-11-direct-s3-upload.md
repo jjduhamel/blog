@@ -1,5 +1,5 @@
 ---
-title: File Uploads
+title: Uploading files to S3
 author: John Duhamel
 ---
 
