@@ -1,6 +1,13 @@
 $black: #000000;
 $pencil: #585c65;
 
+$beige: #D8C6B8;
+$beige1: lighten($beige, 20%);
+$beige2: lighten($beige, 10%);
+$beige3: darken($beige, 0%);
+$beige4: darken($beige, 10%);
+$beige5: darken($beige, 20%);
+
 $brown: #673933;
 $brown1: lighten($brown, 20%);
 $brown2: lighten($brown, 10%);
@@ -14,13 +21,6 @@ $red2: lighten($red, 10%);
 $red3: darken($red, 0%);
 $red4: darken($red, 10%);
 $red5: darken($red, 20%);
-
-$beige: #D8C6B8;
-$beige1: lighten($beige, 20%);
-$beige2: lighten($beige, 10%);
-$beige3: darken($beige, 0%);
-$beige4: darken($beige, 10%);
-$beige5: darken($beige, 20%);
 
 $green: #93AB3D;
 $green1: lighten($green, 20%);
