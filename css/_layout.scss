@@ -5,30 +5,39 @@ body {
   justify-content: flex-start;
   align-items: stretch;
 
-  div#header {
+  #header {
     flex: auto;
-    font-family: 'Delius Unicase', cursive;
-    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid $pencil;
+
+    #logo {
+      flex: 1;
+    }
+
+    #navigation {
+      flex: 1;
+      text-align: right;
+    }
   }
 
-  div#content {
+  #content {
     flex: auto;
-    font-family: 'Delius';
-    font-size: 16px;
   }
 
-  div#footer {
+  #footer {
     flex: auto;
     display: flex;
 
-    #profile {
-      flex: auto;
-      text-align: left;
-
-      a {
-        padding-right: 10px;
-      }
-    }
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 32px;
+    border-top: solid 2px $pencil;
 
     #disclaimer {
       flex: auto;

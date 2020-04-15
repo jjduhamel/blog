@@ -1,5 +1,5 @@
 ---
-title: Install NixOS
+title: Installing NixOS
 author: John Duhamel
 ---
 

@@ -1,13 +1,5 @@
-console.log("RZA");
-
-/*
-var img = document.createElement("img");
-img.src = "images/builder.png";
-document.getElementById("stack").appendChild(img);
-*/
-
 var width = 600;
-var height = 600;
+var height = 420;
 var root;
 
 var force = d3.layout.force();
@@ -34,14 +26,12 @@ var NODE_HEIGHT = 36;
 d3.json("js/stack.json", function(json) {
   root = json;
   root.px = width/2;
-  root.py = height/3;
-  root.fixed = true;
-  console.log(root);
+  root.py = height/2;
+  root.image = "images/builder.png";
   update();
 });
 
 function update() {
-  console.log("update");
   var nodes = flatten(root);
   var links = d3.layout.tree().links(nodes);
 
@@ -77,8 +67,6 @@ function update() {
         return d.image;
       }
     })
-    .attr("x", function(d) { return d.x-NODE_WIDTH/2 })
-    .attr("y", function(d) { return d.y-NODE_HEIGHT/2 })
     .attr("height", NODE_HEIGHT)
     .attr("width", NODE_WIDTH)
     .call(force.drag);
@@ -104,10 +92,6 @@ function tick() {
     .attr("y", function(d) { return _inbounds(d.y, height-NODE_HEIGHT); });
 }
 
-function color(d) {
-  return d._children ? "#3182bd" : "#c6dbef";
-}
-
 function flatten(root) {
   var nodes = [];
   var j = 0;
@@ -125,5 +109,3 @@ function flatten(root) {
 
   return nodes;
 }
-
-console.log("JZA");

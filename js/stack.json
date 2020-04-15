@@ -1,96 +1,113 @@
 {
   "name": "root",
-  "image": "images/builder.png",
-  "x": 100,
-  "y": 100,
   "children": [{
-    "name": "Cloud",
-    "image": "images/cloud.png",
+    "name": "AWS",
+    "image": "images/aws-logo.png",
     "children": [{
-      "name": "AWS",
-      "image": "images/aws.png"
-    }, {
       "name": "Docker",
-      "image": "images/docker.png",
-      "children": [{
-        "name": "CoreOS",
-        "image": "images/coreos.png"
-      }, {
-        "name": "Portainer",
-        "image": "images/portainer.png"
-      }]
+      "image": "images/docker-logo.png"
+    }, {
+      "name": "CoreOS",
+      "image": "images/coreos-logo.png"
     }, {
       "name": "Elastic",
-      "image": "images/elastic.png"
+      "image": "images/elastic-co-logo.png"
     }, {
       "name": "Grafana",
-      "image": "images/grafana.png"
+      "image": "images/grafana-logo.png"
     }, {
       "name": "Hashicorp",
-      "image": "images/hashicorp.png"
+      "image": "images/hashicorp-logo.png"
     }]
   }, {
     "name": "Coding",
     "image": "images/coding.png",
     "children": [{
       "name": "C",
-      "image": "images/c-lang.png"
+      "image": "images/c-lang.png",
+      "children": [{
+        "name": "C++",
+        "image": "images/c-plus-plus-logo.png"
+      }]
+    }, {
+      "name": "Haskell",
+      "image": "images/haskell-logo.png",
+      "children": [{
+        "name": "Nix",
+        "image": "images/nix-logo.png"
+      }, {
+        "name": "Elm",
+        "image": "images/elm-logo.png"
+      }]
     }, {
       "name": "NodeJS",
       "image": "images/nodejs.png",
       "children": [{
-          "name": "Express",
-          "image": "images/expressjs.png"
-        }, {
-          "name": "KoaJS",
-          "image": "images/koajs.png"
+        "name": "Express",
+        "image": "images/expressjs.png"
+      }, {
+        "name": "KoaJS",
+        "image": "images/koajs.png"
+      }, {
+        "name": "Coffeescript",
+        "image": "images/coffeescript-logo.png"
       }, {
         "name": "React",
         "image": "images/react.png"
       }]
     }, {
-      "name": "Haskell",
-      "image": "images/haskell-logo.png"
-    }, {
       "name": "Ruby",
       "image": "images/ruby.png",
       "children": [{
         "name": "Sinatra",
-        "image": "images/rb-sinatra.png"
+        "image": "images/sinatra-logo.png"
+      }, {
+        "name": "Rails",
+        "image": "images/rails-logo.png"
       }]
     }]
   }, {
-    "name": "CSS",
-    "image": "images/css.png",
+    "name": "Design",
+    "image": "images/palette-icon.png",
     "children": [{
+      "name": "CSS",
+      "image": "images/CSS-logo.png"
+    }, {
       "name": "Sass",
-      "image": "images/sass.png"
+      "image": "images/sass-logo.png"
+    }, {
+      "name": "Photoshop",
+      "image": "images/photoshop-logo.png"
     }]
   }, {
-    "name": "OS",
-    "image": "images/os.png",
+    "name": "Unix",
+    "image": "images/unix-logo.png",
     "children": [{
+      "name": "BSD",
+      "image": "images/bsd-logo.png",
+      "children": [{
+        "name": "OpenBSD",
+        "image": "images/openbsd-logo.png"
+      }]
+    }, {
       "name": "Linux",
-      "image": "images/linux.png",
+      "image": "images/linux-logo.png",
       "children": [{
         "name": "Arch",
-        "image": "images/arch.png"
+        "image": "images/arch-logo.png"
+      }, {
+        "name": "Debian",
+        "image": "images/debian-logo.png"
       }, {
         "name": "NixOS",
-        "image": "images/nixos.png"
+        "image": "images/nix-logo.png"
       }, {
         "name": "Slackware",
         "image": "images/slackware.png"
       }]
     }, {
       "name": "MacOS",
-      "image": "images/macos.png"
-    }, {
-      "name": "OpenBSD",
-      "image": "images/openbsd.png"
+      "image": "images/macos-logo.png"
     }]
-  }, {
-    "name": "Bitcoin",
-    "image": "images/bitcoin.png"
   }]
 }

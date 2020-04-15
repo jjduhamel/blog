@@ -11,22 +11,54 @@
 
 
 body {
+  width: 650px;
+  margin: 0px auto 0px auto;
   background-image: url('https://inspirationhut.net/wp-content/uploads/2014/09/lined-paper-texture.jpg');
-  color: #585c65;
+  color: $pencil;
   font-family: 'Delius';
-}
 
-a {
-  text-decoration: none;
-  color: $blue;
-}
-
-div#logo {
   a {
-    font-size: 24px;
+    color: $blue;
+    text-decoration: none;
   }
-}
 
-.profile-image {
-  width: 256px;
+  #header {
+    a {
+      color: $pencil;
+      font-weight: bold;
+    }
+
+    #logo a {
+      font-size: 24px;
+      font-family: 'Delius Unicase', cursive;
+    }
+
+    #navigation a {
+      font-size: 18px;
+      margin-left: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  #content {
+    font-size: 16px;
+
+    .profile-image {
+      width: 256px;
+    }
+
+    .post-header {
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    h3 { font-size: 16px; }
+  }
+
+  #footer {
+    font-size: 12px;
+  }
 }
