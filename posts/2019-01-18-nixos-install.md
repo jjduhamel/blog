@@ -3,13 +3,11 @@ title: Installing NixOS
 author: John Duhamel
 ---
 
-# Introduction
+## Introduction
 
 NixOS is a Linux distribution that can be fully configured using a functional configuration language called Nix. There are several advantages to this approach. NixOS stores a snapshot of the system each time you rebuild the configuration, making it easy to revert to a previous good state in case you brick your system.
 
 Additionally, it’s easy to share configurations on multiple workstations, greatly reducing the burden of creating new hosts. For this reason, it’s convenient to experiment with new configurations using VirtualBox. When you feel ready, it’s reletively easy to port your configuration to your actual hardware making a small set of documented changes.
-
-# Installation
 
 ## Start NixOS
 
@@ -70,8 +68,6 @@ Now it’s time to reboot your system. If you did it correctly you’ll see a gr
   ![](/images/nixos-revisions.png){width=45%}
 </div>
 
-# Configuration
-
 ## Install Vim
 
 Once you reboot your system, you may notice that some tools are missing. The first obvious one that stuck out for me was that vim was not installed. In order to install it, add the following to your config:
@@ -112,6 +108,6 @@ Also, you may wish to enable passwordless sudo.
 $ nixos-rebuild switch
 ```
 
-# Conclusion
+## Conclusion
 
 Now you have a very basic NixoS installation.  You may wish to read my [next post](/posts/2019-01-29-nixos-i3-setup.html) as well, where I set up i3 and install a few appications to make the install more usable.

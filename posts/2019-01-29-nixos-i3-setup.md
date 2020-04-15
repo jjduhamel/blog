@@ -3,7 +3,7 @@ title: Setup i3 on NixOS
 author: John Duhamel
 ---
 
-# Introduction
+## Introduction
 
 In this post, we’ll configure i3 and install a few applications to build a minimal usable workflow. Specifically, we’ll install the following.
 
@@ -13,7 +13,7 @@ In this post, we’ll configure i3 and install a few applications to build a min
 * Clipboard: clipmenu
 * Keychain: gnome-keyring
 
-# Enable i3
+## Enable i3
 
 The first step is to install i3. To do this, uncomment the following in your nix configuration file.
 
@@ -55,7 +55,7 @@ Congratulations, you’ve installed i3!
   ![](/images/i3-welcome.png){width=75%}
 </div>
 
-# Modifier Key
+## Modifier Key
 
 **Note:** *This is likely configured correctly by default.*
 
@@ -87,7 +87,7 @@ $ nix-shell -p xorg.xev "xev -event keyboard"
 
 *Caveat:* I had a small hangup which was caused by virtualbox intercepting the Super_L key. In order to fix this, go to VirtualBox VM -> Preferences -> Input and change the Host Key Configuration to be Right ⌘.
 
-# Terminal
+## Terminal
 
 My preferred terminal emulator is urxvt. By default, NixOS uses xterm. In order to change this, add the following to your configuration:
 
@@ -106,7 +106,7 @@ My preferred terminal emulator is urxvt. By default, NixOS uses xterm. In order 
 $ nixos-rebuild switch
 ```
 
-# Install Fonts
+## Install Fonts
 
 You’ll likely want to change the default font to something that looks a little nicer. I prefer to use Hermit, although Source Code Pro and Terminus are other options. In order to install these, run:
 
@@ -124,7 +124,7 @@ You’ll likely want to change the default font to something that looks a little
 $ sudo nixos-rebuild switch
 ```
 
-# Configure URxvt
+## Configure URxvt
 
 Now, you’ll need to configure urxvt to use your desired font. While we’re at it, let’s change the background color to black and get rid of the ugly scrollbar.
 
@@ -156,7 +156,7 @@ $ nix-channel --update
 $ nixos-rebuild switch --upgrade
 ```
 
-# Browser
+## Browser
 
 The process for installing firefox is fairly straight forward. Simply add the following to your NixOS configuration:
 
@@ -169,7 +169,7 @@ The process for installing firefox is fairly straight forward. Simply add the fo
   ];
 ```
 
-# Clipboard
+## Clipboard
 
 I like to use clipmenu as a clipboard manager. To install clipmenu, add the following to your NixOS config:
 
@@ -195,7 +195,7 @@ Now, when you press `<Mod>-v`, you’ll see a menu at the top of your screen sho
 
 **Caveat:** urxvt uses `<Ctrl>-<Alt>-`c and `<Ctrl>-<Alt>-v` for copy paste. This is necessary since many cli applications bind to `<Ctrl>-c` and `<Ctrl>-v`.
 
-# Keychain
+## Keychain
 
 You’ll want to setup a keychain. This provides an extra layer of security for sensitive data like passwords and pgp keys. Your data is encrypted at-rest, and unlocked when you enter your password during boot.
 
@@ -210,7 +210,7 @@ You’ll want to setup a keychain. This provides an extra layer of security for 
 
 For these changes to take effect, you’ll need to reboot your computer (be sure to nixos-rebuild switch first). Once you do that, open seahorse and create a new Password Keyring called `login`. Be sure to use the same password that you use to login.
 
-# Conclusion
+## Conclusion
 
 You now have a very basic i3 setup which should be suitable as a base for more abitious projects.
 
