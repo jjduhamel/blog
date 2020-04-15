@@ -71,7 +71,7 @@
     "image": "images/palette-icon.png",
     "children": [{
       "name": "CSS",
-      "image": "images/CSS-logo.png"
+      "image": "images/css-logo.png"
     }, {
       "name": "Sass",
       "image": "images/sass-logo.png"
