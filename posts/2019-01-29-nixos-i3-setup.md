@@ -24,7 +24,7 @@ The first step is to install i3. To do this, uncomment the following in your nix
   services.xserver.autorun = false;
   services.xserver.layout = "us";
   services.xserver.desktopManager.default = "none";
-  services.xserver.desktopManager.xterm.enabe = false;
+  services.xserver.desktopManager.xterm.enable = false;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.windowManager.i3.enable = true;
 ```
