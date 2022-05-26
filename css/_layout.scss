@@ -1,55 +1,61 @@
 body {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  flex-direction: row;
+  justify-content: center;
 
-  #header {
-    flex: auto;
+  #container {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
 
-    padding-top: 12px;
-    padding-bottom: 12px;
-    margin-bottom: 16px;
-    border-bottom: 2px solid $pencil;
-
-    #logo {
-      flex: 1;
-    }
-
-    #navigation {
-      flex: 1;
-      text-align: right;
-    }
-  }
-
-  #content {
-    flex: auto;
-  }
-
-  #footer {
-    flex: auto;
-    display: flex;
-
-    padding-top: 12px;
-    padding-bottom: 12px;
-    margin-top: 32px;
-    border-top: solid 2px $pencil;
-
-    #disclaimer {
+    #header {
       flex: auto;
-      text-align: right;
-    }
-  }
-
-  .image-pane {
-    p {
       display: flex;
-      justify-content: space-around;
-      align-items: space-around;
+      flex-direction: row;
+      align-items: flex-end;
+
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid $pencil;
+
+      #logo {
+        flex: 1;
+      }
+
+      #navigation {
+        flex: 1;
+        text-align: right;
+      }
+    }
+
+    #content {
+      flex: auto;
+    }
+
+    #footer {
+      flex: auto;
+      display: flex;
+
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-top: 16px;
+      border-top: solid 2px $pencil;
+
+      #disclaimer {
+        flex: auto;
+        text-align: right;
+      }
+    }
+
+    .image-pane {
+      p {
+        display: flex;
+        justify-content: space-around;
+        align-items: space-around;
+      }
     }
   }
 }

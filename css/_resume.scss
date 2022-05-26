@@ -1,0 +1,27 @@
+#resume {
+  background-color: yellow;
+  display: flex;
+  flex: 1;
+
+  .icon {
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  .company {
+    flex: 1;
+  }
+
+  .role {
+    font-size: 14px;
+  }
+
+  .years {
+  }
+
+  .skills {
+    margin: 6px 0 12px 12px;
+    font-size: 12px;
+  }
+}

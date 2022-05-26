@@ -7,19 +7,21 @@
 @import './layout';
 @import './lists';
 @import './portfolio';
+@import './resume';
 @import './skills-widget';
 
-
 body {
-  width: 650px;
-  margin: 0px auto 0px auto;
-  background-image: url('https://inspirationhut.net/wp-content/uploads/2014/09/lined-paper-texture.jpg');
+  background-image: url('/images/lined-paper.jpg');
   color: $pencil;
   font-family: 'Delius';
 
   a {
     color: $blue;
     text-decoration: none;
+  }
+
+  #container {
+    width: 650px;
   }
 
   #header {
@@ -56,6 +58,13 @@ body {
     h2 { font-size: 20px; }
     h3 { font-size: 18px; }
     h3 { font-size: 16px; }
+
+    #portfolio-links {
+      font-size: 16px;
+      margin: 0;
+      padding-top: 0;
+    }
+
   }
 
   #footer {

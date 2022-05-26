@@ -45,7 +45,7 @@ main = hakyllWith hakyllConf $ do
           >>= loadAndApplyTemplate "templates/default.html" postCtx
           >>= relativizeUrls
 
-    create ["archive.html"] $ do
+    create ["blog.html"] $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
@@ -59,39 +59,31 @@ main = hakyllWith hakyllConf $ do
               >>= loadAndApplyTemplate "templates/default.html" archiveCtx
               >>= relativizeUrls
 
-    match "about.md" $ do
+    match "resume.md" $ do
       route $ setExtension "html"
       compile $ pandocCompiler
         >>= applyAsTemplate defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
-    match "portfolio.html" $ do
-      route idRoute
-      compile $ do
-        getResourceBody
-          >>= applyAsTemplate defaultContext
-          >>= loadAndApplyTemplate "templates/default.html" defaultContext
-          >>= relativizeUrls
+    match "nft.md" $ do
+      route $ setExtension "html"
+      compile $ pandocCompiler
+        >>= applyAsTemplate defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
 
-    match "design.html" $ do
-      route idRoute
+    match "index.md" $ do
+      route $ setExtension "html"
       compile $ do
-        getResourceBody
-          >>= applyAsTemplate defaultContext
-          >>= loadAndApplyTemplate "templates/default.html" defaultContext
-          >>= relativizeUrls
-
-    match "index.html" $ do
-      route idRoute
-      compile $ do
-        posts <- fmap (take 5) . recentFirst =<< loadAll "posts/*"
+        posts <- fmap (take 3) . recentFirst =<< loadAll "posts/*"
         let indexCtx =
               listField "posts" postCtx (return posts) `mappend`
               constField "title" "Home"                `mappend`
               defaultContext
         getResourceBody
           >>= applyAsTemplate indexCtx
+          >>= renderPandoc
           >>= loadAndApplyTemplate "templates/default.html" indexCtx
           >>= relativizeUrls
 
@@ -110,11 +102,10 @@ compressScssCompiler :: Compiler (Item String)
 compressScssCompiler = do
   fmap (fmap compressCss) $
     getResourceString
-    >>= withItemBody (unixFilter "sass" [ "--stdin"
-                                        , "--scss"
-                                        , "--style", "compressed"
-                                        , "--load-path", "./css"
-                                        ])
+    >>= withItemBody (unixFilter "sassc" [  "--stdin"
+                                          , "--style", "compressed"
+                                          , "--load-path", "./css"
+                                          ])
 
 --------------------------------------------------------------------------------
 -- Contexts
@@ -122,10 +113,6 @@ compressScssCompiler = do
 defaultCtx :: Context String
 defaultCtx =
     defaultContext
-
-mainCtx :: Context String
-mainCtx =
-    defaultCtx
 
 postCtx :: Context String
 postCtx =
